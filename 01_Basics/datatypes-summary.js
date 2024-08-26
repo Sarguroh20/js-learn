@@ -41,3 +41,26 @@ console.log(typeof scoreValue);
 console.log(typeof id);
 console.log(typeof myFunction);
 console.log(typeof deserts);
+
+
+// 📌📌📌📌📌📌 Memory 📌📌📌📌📌📌
+// Stack (Primitive), Heap (Non-Primitive)
+
+let myYT = "onlyabt"
+let anothermyYT = myYT;
+anothermyYT = "New Channel"
+
+console.log(myYT);
+console.log(anothermyYT);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "user2@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
