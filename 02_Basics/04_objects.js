@@ -53,9 +53,41 @@ const users = [
 // console.log(users[1].email);
 // console.log(myApp);
 
-console.log(Object.keys(myApp));        // [ 'id', 'name', 'isLoggedIn' ]
-console.log(Object.values(myApp));      // [ '123abc', 'user1', false ]
-console.log(Object.entries(myApp));     // [ [ 'id', '123abc' ], [ 'name', 'user1' ], [ 'isLoggedIn', false ] ]
+// console.log(Object.keys(myApp));        // [ 'id', 'name', 'isLoggedIn' ]
+// console.log(Object.values(myApp));      // [ '123abc', 'user1', false ]
+console.log(Object.entries(myApp));        // [ [ 'id', '123abc' ], [ 'name', 'user1' ], [ 'isLoggedIn', false ] ]
 
-console.log(myApp.hasOwnProperty('isLoggedIn'));        // true
-console.log(myApp.hasOwnProperty('isLogged'));          // false
+// console.log(myApp.hasOwnProperty('isLoggedIn'));        // true
+// console.log(myApp.hasOwnProperty('isLogged'));          // false
+
+// 📌📌📌📌📌📌 Object De-structuring 📌📌📌📌📌📌
+const course = {
+    coursename: "Chai aur Js",
+    price: "999",
+    courseInstructor: "Hitesh"
+}
+
+// console.log(course.courseInstructor);
+
+// const {courseInstructor} = course        
+// console.log(courseInstructor);           // Hitesh
+
+const {courseInstructor: instructor} = course
+console.log(instructor);
+
+// API 
+// Before XML, Now JSON
+// {
+//     "name": "myname",
+//     "coursename": "Chai aur Js",
+//     "price": "free"
+// }
+
+[
+    {},
+    {},
+    {}
+]
+
+// randomuser me api -: https://randomuser.me/api/
+// JSON Formatter -: https://jsonformatter.org/
