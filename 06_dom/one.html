@@ -29,3 +29,67 @@
     </div>
 </body>
 </html>
+
+    <!-- Practice on Wikipedia!
+    console.log(window)
+    console.log(window.document)
+    console.log(document)
+    console.dir(document)
+    console.log(document.baseURI)            
+    console.log(document.links)
+    console.log(document.links[2])
+    📝 Selector Elements 📝
+    document.getElementById('id')
+    document.getElementById('id').innerHTML = "<h1>Document Object Model</h1>" -->
+
+    <!-- From above html code!
+    document.getElementById('title')
+    document.getElementsByClassName('heading')
+    document.getElementById('title').id
+    document.getElementById('title').className
+    document.getElementById('title').getAttribute('id')
+    document.getElementById('title').getAttribute('class')
+    document.getElementById('title').setAttribute('class', 'test heading')
+    const title = document.getElementById('title')
+    title.style.backgroundColor = 'aqua'
+    title.style.padding = "15px"
+    title.style.borderRadius = "15px"
+
+    Difference between textContent & innerText: innerText displays only visible text whereas textContent displays entire text even if it's hided due to some css property!
+    title.textContent
+    title.innerHTML
+    title.innertext
+
+    📝 Query Selector 📝
+    document.querySelector('h2')
+    document.querySelector('#title')
+    document.querySelector('.heading')
+    document.querySelector('input[type="password"]')
+
+    const myul = document.querySelector('ul')
+    const turnPink = myul.querySelector('li')
+    turnPink.style.backgroundColor = "pink"
+    turnPink.style.padding = "10px"
+    turnPink.innerText
+    turnPink.innerText = "Five"
+
+    document.querySelectorAll('li')                 ~ Return NodeList (Includes forEach in its prototype)
+    const tempLiList = document.querySelectorAll('li')
+    tempLiList.style.color = 'aqua'                 ~ Error
+    tempLiList[0].style.color = 'aqua'    
+    tempLiList.forEach( function (li) {
+        li.style.backgroundColor = "orange"
+    } ) 
+
+    const myh1 = document.querySelectorAll('h1')    ~ Return NodeList   
+    myh1[0].style.color = 'aqua'   
+
+    document.getElementsByClassName('list-item')    ~ Return HTMLCollection (Does not include forEach in its prototype)
+    const tempClassList = document.getElementsByClassName('list-item')
+
+    Converting HTMLCollection into an Array!
+    const myConvertedArray = Array.from(tempClassList)
+    myConvertedArray.forEach( function (li) {
+        li.style.color = "orange"
+    } ) -->
+     
