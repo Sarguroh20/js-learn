@@ -55,16 +55,15 @@ form.addEventListener('submit', function(e){
       results.innerHTML = `<span>${bmi}</span> You're under weight!`;
     }
     else if(bmi <= 24.9){
-      results.innerHTML = `<span>${bmi}</span> Your weight is normal!`;
+      results.innerHTML 
+      = `<span>${bmi}</span> Your weight is normal!`;
     }
     else {
-      results.innerHTML = `<span>${bmi}</span> You're over weight!`;
+      results.innerHTML =   `<span>${bmi}</span> You're over weight!`;
     }
   }
 });
 ```
-<<<<<<< HEAD
-=======
 
 ## Project 3
 
@@ -79,4 +78,3 @@ setInterval(function(){
   clock.innerHTML = date.toLocaleTimeString();
 }, 1000);
 ```
->>>>>>> 5cc31f9 (Project 3 Solution Code)
