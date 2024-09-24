@@ -55,11 +55,10 @@ form.addEventListener('submit', function(e){
       results.innerHTML = `<span>${bmi}</span> You're under weight!`;
     }
     else if(bmi <= 24.9){
-      results.innerHTML 
-      = `<span>${bmi}</span> Your weight is normal!`;
+      results.innerHTML = `<span>${bmi}</span> Your weight is normal!`;
     }
     else {
-      results.innerHTML =   `<span>${bmi}</span> You're over weight!`;
+      results.innerHTML = `<span>${bmi}</span> You're over weight!`;
     }
   }
 });
