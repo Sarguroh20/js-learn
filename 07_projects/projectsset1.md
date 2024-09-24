@@ -63,3 +63,20 @@ form.addEventListener('submit', function(e){
   }
 });
 ```
+<<<<<<< HEAD
+=======
+
+## Project 3
+
+```javascript
+const clock = document.getElementById('clock');
+// const clock = document.querySelector('#clock');
+
+
+setInterval(function(){
+  let date = new Date();
+  // console.log(date.toLocaleTimeString());
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
+```
+>>>>>>> 5cc31f9 (Project 3 Solution Code)
