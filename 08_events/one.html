@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <!-- <li><img width="200px" id="db1" src="https://images.pexels.com/photos/162031/dubai-tower-arab-khalifa-162031.jpeg" alt="photoshop" onclick="alert('Welcome!')"></li> -->   <!--Approach 1️⃣: Injecting events in HTML is not a feasible approach & hence can cause problem in scaling.-->
+            <li><img width="200px" id="db1" src="https://images.pexels.com/photos/162031/dubai-tower-arab-khalifa-162031.jpeg" alt="photoshop"></li>
+            <li><img width="200px" id="db2" src="https://images.pexels.com/photos/1302991/pexels-photo-1302991.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+            <li><img width="200px" id="db3" src="https://images.pexels.com/photos/3873672/pexels-photo-3873672.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+            <li><img width="200px" id="db4" src="https://images.pexels.com/photos/12238319/pexels-photo-12238319.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" ></li>
+            <li><img width="200px" id="db5" src="https://images.pexels.com/photos/15177971/pexels-photo-15177971/free-photo-of-united-arab-emirates-pavilion.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // Js is a sequentially run language & thereby events too run sequentially.
+
+    // document.getElementById('db1').onclick = function(){                     // Approach 2️⃣
+    //     alert('Welcome to Dubai!')
+    // }
+
+    // document.getElementById('db1').addEventListener('click', function(){    // Approach 3️⃣ (Best)
+    //     alert('Welcome to Dubai again!')
+    // })
+
+    // Other Approach
+    // attachEvent()
+    // jQuery - on
+
+    // Events - Browser & Environment events
+    // Event Object
+    // type(keyboard, mouse), timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // 📝 Position related interview Q. clientX, clientY, screenX, screenY, offsetX, offsetY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('db1').addEventListener('click', function(e){
+    //     console.log(e);   
+    // }, false)
+
+    // Event Propagation
+    // 2 Context of Event Propagation - Event Bubbling & Event Capturing
+    // document.getElementById('db1').addEventListener('click', function(e){    // Event Bubbling (Default)
+    //     console.log(e);   
+    // }, false)
+
+    // 🔖 Event Bubbling - Bottom to Top
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log('CLicked inside the ul');
+    // }, false)
+
+    // document.getElementById('db1').addEventListener('click', function(e){
+    //     console.log('Welcome to Dubai!');   
+    // }, false)
+
+    // 🔖 Event Capturing - Top to Bottom
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log('CLicked inside the ul');
+    // }, true)
+
+    // document.getElementById('db1').addEventListener('click', function(e){
+    //     console.log('Welcome to Dubai!');   
+    // }, true)
+
+    // Stop Event Bubbling using stopPropagation() - Event will not bubble up to top element
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log('Clicked inside the ul');
+    // })
+
+    // document.getElementById('db1').addEventListener('click', function(e){
+    //     console.log('Welcome to Dubai!');
+    //     e.stopPropagation();
+    // })
+
+    // preventDefault - Change the default behavior : Like when you click on google the defaut behavior is to redirect to google.com & changing the default behavior means it should not redirect on click.
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     console.log('Google Clicked');
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    // }, false)
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e.target.parentNode);
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+        }
+    }, false)
+    
+    // removeIt.parentNode.removeChild(removeIt);
+
+</script>
+</html>
