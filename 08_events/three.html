@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h1>Chai aur Js</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setInterval(function(){
+    //     console.log('I like development', Date.now());
+    // }, 1000)    
+
+    // const say = function(){
+    //     console.log('I like development', Date.now());
+    // }
+    // setInterval(say, 1000);
+
+    // const say = function(str){
+    //     console.log(str, Date.now());
+    // }
+    // setInterval(say, 1000, 'Js');
+
+    // const intervalId = setInterval(say, 1000, 'Js');
+    // clearInterval(intervalId);
+
+    // 📑 Task
+    const intervalId = function(str){
+        console.log(str, Date.now());
+    }
+    let stInterval;
+    
+    document.querySelector('#start').addEventListener('click', function(str){
+        stInterval = setInterval(intervalId, 1000, 'Js');
+        console.log('Started');
+    })
+
+    document.querySelector('#stop').addEventListener('click', function(str){
+        clearInterval(stInterval);
+        stInterval = null;
+        console.log('Stopped');
+    })
+
+</script>
+</html>
