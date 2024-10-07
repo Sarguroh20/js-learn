@@ -13,7 +13,7 @@ const user = {
 
 // console.log(user.username);
 // console.log(user["username"]);
-// console.log(user.ge tUserDetails());
+// console.log(user.getUserDetails());
 // console.log(this);                              // {}
 
 // Constructor Function -> 'new' keyword 
