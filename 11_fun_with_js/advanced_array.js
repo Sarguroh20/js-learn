@@ -55,4 +55,6 @@ arrFive.push('3')                   // PACKED_ELEMENTS
 
 const arrSix = [1, 2, 3, 4, 5]      // PACKED_SMI_ELEMEMT
 arrSix.push(NaN)                    // PACKED_DOUBLE
-arrSix.push(Infinity)                    // PACKED_DOUBLE
+arrSix.push(Infinity)               // PACKED_DOUBLE
+
+// Recommendation for modern optimization engines: Most preferred Usage of loops - for, for-of, forEach
